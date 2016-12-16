@@ -1,1 +1,1 @@
-web: python flaskr.flaskr.py --log-file -
+web: python flaskr.py --log-file -
