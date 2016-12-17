@@ -1,1 +1,1 @@
-web: python flaskr.py
+web: gunicorn flaskr:app -p 5000
