@@ -1,1 +1,1 @@
-web: FLASK_APP=flaskr;flask run
+web: gunicorn app:flaskr
