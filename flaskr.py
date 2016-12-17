@@ -19,6 +19,10 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
 # create our little application :)
 app = Flask(__name__)
 
+#dos
+with app.app_context():
+      init_db()
+
 # Load default config and override config from an environment variable
 app.config.update(dict(
     DATABASE=os.path.join(app.root_path, 'flaskr.db'),
@@ -28,6 +32,7 @@ app.config.update(dict(
     PASSWORD='default'
 ))
 app.config.from_envvar('FLASKR_SETTINGS', silent=True)
+
 
 
 def connect_db():
